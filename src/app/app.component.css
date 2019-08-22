@@ -1,0 +1,46 @@
+li {
+    list-style: none;
+}
+.checked{
+    color: orange;
+}
+.review{
+    position: relative;
+    color: orange;
+    left: 10%;
+    margin-right: 2px;
+}
+.review:hover {
+    text-decoration-line: underline;
+}
+.card:hover {
+    animation-name: select;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    cursor: pointer;
+    color: rgb(62, 62, 252);
+}
+.overlay:hover  {
+    opacity: 1;
+}
+.overlay{
+    position: absolute; 
+    bottom: 50%; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+@keyframes select {
+    0% { box-shadow: none; }
+    100% { box-shadow: 0 2px 5px #111111;
+           transform: scale(1.01,1.01);
+        }
+}
